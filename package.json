@@ -1,0 +1,38 @@
+{
+    "name": "my-vue-app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "axios": "^1.5.1",
+        "cannon": "^0.6.2",
+        "datejs": "^1.0.0-rc3",
+        "dayjs": "^1.11.10",
+        "element-plus": "^2.3.8",
+        "moment": "^2.29.4",
+        "path": "^0.12.7",
+        "pinia": "^2.1.4",
+        "three": "^0.154.0",
+        "three-onevent": "^1.1.2",
+        "vform3-builds": "^3.0.10",
+        "video.js": "^8.3.0",
+        "vue": "^3.2.47",
+        "vue-draggable-next": "^2.2.1",
+        "vue-router": "^4.0.13",
+        "vue-video-player": "^5.0.2"
+    },
+    "devDependencies": {
+        "@types/cannon": "^0.1.8",
+        "@types/node": "^20.8.8",
+        "@types/three": "^0.152.1",
+        "@vitejs/plugin-vue": "^4.1.0",
+        "typescript": "^5.0.2",
+        "vite": "^4.3.9",
+        "vue-tsc": "^1.4.2"
+    }
+}

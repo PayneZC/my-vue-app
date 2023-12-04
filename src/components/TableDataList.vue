@@ -91,7 +91,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import LuckySheet from '@/components/LuckysheetDemo.vue'
+// import LuckySheet from '@/components/LuckysheetDemo.vue'
 import { ref, reactive, nextTick } from 'vue'
 import type { Ref } from 'vue'
 import { TableData } from '@/api/TableData'

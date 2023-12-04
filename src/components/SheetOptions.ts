@@ -2,9 +2,9 @@
  * @Description:  luckySheet 表格基础配置文件
  * @Author: 赵春鹏 605252879@qq.com
  * @Date: 2023-10-30 13:34:41
- * @LastEditors: 赵春鹏 605252879@qq.com
- * @LastEditTime: 2023-10-30 18:07:49
- * @FilePath: /my-vue-app/src/components/SheetOptions.ts
+ * @LastEditors: 赵春鹏 zhaocp@dongruist.com
+ * @LastEditTime: 2023-12-04 18:33:08
+ * @FilePath: \my-vue-app\src\components\SheetOptions.ts
  * Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
  */
 
@@ -771,7 +771,7 @@ const options: Record<string, any> = {
   allowUpdate: false, // 允许更新，与updateUrl配置使用，共享编辑时必须开启
   updateUrl: '', // 更新地址，配置websocket地址，数据pako压缩，后台需要先解压
   updateImageUrl: '', // 缩略图更新地址  
-  // plugins: [ { name: 'chart'} ], // 插件支持“chart”（官网上直接传字符串'chart'会报错）
+  plugins: [ { name: 'chart'} ], // 插件支持“chart”（官网上直接传字符串'chart'会报错）
   column: 60, // 空表格列数，默认60
   row: 84, // 空表格行数，默认84
   autoFormatw: false, // 亿万格式，自动格式化

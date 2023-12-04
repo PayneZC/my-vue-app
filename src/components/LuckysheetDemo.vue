@@ -2,9 +2,9 @@
  * @Description:  
  * @Author: 赵春鹏 605252879@qq.com
  * @Date: 2023-10-13 09:04:13
- * @LastEditors: 赵春鹏 605252879@qq.com
- * @LastEditTime: 2023-10-31 13:33:18
- * @FilePath: /my-vue-app/src/components/LuckysheetDemo.vue
+ * @LastEditors: 赵春鹏 zhaocp@dongruist.com
+ * @LastEditTime: 2023-11-24 16:34:14
+ * @FilePath: \my-vue-app\src\components\LuckysheetDemo.vue
  * Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
 -->
 <template>
@@ -22,7 +22,10 @@ import { useRouter } from 'vue-router'
 import type { Router, LocationQuery } from 'vue-router'
 import options from "@/components/SheetOptions"
 
-declare const window: any;
+/**
+ * 系统地址
+ */
+const BaseUrl = window.location.hostname + ':8085'
 
 const router: Router = useRouter()
 
@@ -33,11 +36,14 @@ const router: Router = useRouter()
  */
 const init = (row: any): void => {
   console.log("🚀 ~ file: LuckysheetDemo.vue:130 ~ init ~ row:", row)
+  const wsUrl = 'ws://' + BaseUrl + "/sheet/" + Math.round(Math.random() * 100) + '/' + row.tableId
   const config: Record<string, any> = Object.assign({}, options)
   config.container = 'luckysheet'
   config.gridKey = row.tableId
   config.loadUrl = '/api/stSheetData/load'
   config.loadSheetUrl = '/api/stSheetData/loadSheet'
+  config.allowUpdate = true
+  config.updateUrl = wsUrl
   luckysheet.create(config)
 }
 const test = () => {
@@ -72,7 +78,7 @@ onMounted(() => {
   })
 })
 /**
- * 暴漏方法
+ * 暴露方法
  */
 defineExpose({
 		init

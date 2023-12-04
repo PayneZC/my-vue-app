@@ -2,9 +2,9 @@
  * @Description:  
  * @Author: 赵春鹏 605252879@qq.com
  * @Date: 2023-07-17 17:21:58
- * @LastEditors: 赵春鹏 605252879@qq.com
- * @LastEditTime: 2023-10-25 08:59:36
- * @FilePath: /my-vue-app/vite.config.ts
+ * @LastEditors: 赵春鹏 zhaocp@dongruist.com
+ * @LastEditTime: 2023-11-22 10:14:00
+ * @FilePath: \my-vue-app\vite.config.ts
  * Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
  */
 import { defineConfig, CommonServerOptions } from 'vite';
@@ -32,6 +32,7 @@ export default defineConfig({
         },
     },
     server: {
+        host: '0.0.0.0',    // ← 新增内容 ←
         proxy: {
             '/api': {
                 target: 'http://127.0.0.1:8085',// 实际后台地址

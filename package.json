@@ -9,6 +9,8 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@surely-vue/table": "^4.2.2",
+        "ant-design-vue": "4.x",
         "axios": "^1.5.1",
         "cannon": "^0.6.2",
         "datejs": "^1.0.0-rc3",
@@ -31,6 +33,7 @@
         "@types/node": "^20.8.8",
         "@types/three": "^0.152.1",
         "@vitejs/plugin-vue": "^4.1.0",
+        "less": "^4.2.0",
         "typescript": "^5.0.2",
         "vite": "^4.3.9",
         "vue-tsc": "^1.4.2"

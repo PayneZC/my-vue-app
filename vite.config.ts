@@ -1,19 +1,25 @@
 /*
- * @Description:  
+ * @Description:
  * @Author: 赵春鹏 605252879@qq.com
  * @Date: 2023-07-17 17:21:58
  * @LastEditors: 赵春鹏 zhaocp@dongruist.com
- * @LastEditTime: 2023-11-22 10:14:00
+ * @LastEditTime: 2023-12-07 10:42:36
  * @FilePath: \my-vue-app\vite.config.ts
  * Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
  */
 import { defineConfig, CommonServerOptions } from 'vite';
-import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
-
+import vue from '@vitejs/plugin-vue';
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    css: {
+        preprocessorOptions: {
+            less: {
+                javascriptEnabled: true,
+            },
+        },
+    },
     plugins: [vue()],
     resolve: {
         alias: {
@@ -32,13 +38,13 @@ export default defineConfig({
         },
     },
     server: {
-        host: '0.0.0.0',    // ← 新增内容 ←
+        host: '0.0.0.0', // ← 新增内容 ←
         proxy: {
             '/api': {
-                target: 'http://127.0.0.1:8085',// 实际后台地址
+                target: 'http://127.0.0.1:8085', // 实际后台地址
                 changeOrigin: true, // 需要代理跨域
-                rewrite: (path) => path.replace(/^\/api/, ''),// 重写路径
-            }
-        }
-    }
-})
+                rewrite: path => path.replace(/^\/api/, ''), // 重写路径
+            },
+        },
+    },
+});

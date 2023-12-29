@@ -3,7 +3,7 @@
  * @Author: 赵春鹏 605252879@qq.com
  * @Date: 2023-10-24 18:20:14
  * @LastEditors: 赵春鹏 zhaocp@dongruist.com
- * @LastEditTime: 2023-12-07 15:50:15
+ * @LastEditTime: 2023-12-22 17:06:09
  * @FilePath: \my-vue-app\src\request\request.ts
  * Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
  */
@@ -15,7 +15,7 @@ const instance = axios.create({
     timeout: 10000,
 });
 
-export const token = 'dca4bdd0-1aa8-462e-92ff-23005bc71a19';
+export const token = 'c03a4263-3cd4-45bf-b2f6-97de2e4b145f';
 
 // request interceptor
 instance.interceptors.request.use(config => {

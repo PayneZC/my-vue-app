@@ -3,7 +3,7 @@
  * @Author: 赵春鹏 605252879@qq.com
  * @Date: 2023-07-17 17:21:58
  * @LastEditors: 赵春鹏 zhaocp@dongruist.com
- * @LastEditTime: 2023-12-07 10:42:36
+ * @LastEditTime: 2023-12-11 11:00:22
  * @FilePath: \my-vue-app\vite.config.ts
  * Copyright (c) 2023 by ${git_name} email: ${git_email}, All Rights Reserved.
  */
@@ -32,10 +32,10 @@ export default defineConfig({
     },
     build: {
         /* 其他build生产打包配置省略 */
-        //...
         commonjsOptions: {
             include: /node_modules|lib/,
         },
+        outDir: 'spreadSheet',
     },
     server: {
         host: '0.0.0.0', // ← 新增内容 ←
